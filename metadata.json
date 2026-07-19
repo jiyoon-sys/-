@@ -1,0 +1,6 @@
+{
+  "name": "VibeCloset",
+  "description": "An elegant, fashion-forward marketplace targeting modern Vietnamese and Korean style trends with exquisite minimalism.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
