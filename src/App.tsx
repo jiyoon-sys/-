@@ -9,6 +9,7 @@ import {
   Droplets,
   LocateFixed,
   MapPin,
+  MessageCircle,
   Search,
   Sun,
   Sunrise,
@@ -80,6 +81,7 @@ export default function App() {
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
+  const [showGreeting, setShowGreeting] = useState(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -169,6 +171,16 @@ export default function App() {
     <main className="weather-shell">
       <div className="aurora aurora-one" />
       <div className="aurora aurora-two" />
+
+      <button
+        className="side-fab"
+        type="button"
+        onClick={() => setShowGreeting((prev) => !prev)}
+        aria-label="인사 메시지 보기"
+      >
+        <MessageCircle size={22} />
+      </button>
+      {showGreeting && <div className="side-greeting">안녕</div>}
 
       <section className="weather-app">
         <header className="topbar">
